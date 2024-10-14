@@ -13,7 +13,7 @@ const userRouter = require("express").Router();
 
 userRouter.post("/login", login)
 
-// userRouter.use(verifyToken);
+userRouter.use(verifyToken);
 
 userRouter.post("/create", userPostController);
 userRouter.get("/getAll", userGetAllController);
@@ -24,4 +24,4 @@ userRouter.delete("/delete/:id", userDeleteController);
 
 module.exports = {
     userRouter
-}
+};

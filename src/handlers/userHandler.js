@@ -27,7 +27,8 @@ const userPutHandler = async(id, email, password) => {
     if(!found){
         return false;
     } else{
-        const updated = await found.update({ email, password });
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const updated = await found.update({ email, password: hashedPassword });
         return updated;
     }
 };
