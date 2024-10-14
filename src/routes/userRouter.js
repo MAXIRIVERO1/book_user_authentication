@@ -1,4 +1,4 @@
-const { login } = require("../authentication/authcontroller.js");
+const { login } = require("../authentication/authController.js");
 const { verifyToken } = require("../authentication/verifyToken.js");
 const { userPostController } = require("../controllers/userController.js");
 const { userGetAllController } = require("../controllers/userController.js");
